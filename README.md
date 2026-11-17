@@ -5,8 +5,8 @@
 <br/>
 
 Пишу продукты целиком: серверную часть, интерфейсы и инфраструктуру.
-Люблю системы, где данные живут в одном источнике правды, доступ проверяется на сервере,
-а интерфейс не заставляет пользователя думать.
+Люблю системы, где данные живут в одном источнике правды, доступ проверяется
+на сервере, а интерфейс не заставляет пользователя думать.
 
 <div align="center">
   <a href="https://skillicons.dev">
@@ -15,94 +15,28 @@
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/stats.svg" width="95%" alt="Activity: contributions this year, current and longest streak, weekly rhythm" />
 </div>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" />
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" width="100%" alt="Contribution snake" />
+</picture>
 
-### Что делаю
-
-**Сервер** — асинхронный Python: FastAPI, SQLAlchemy, Alembic. PostgreSQL как
-единственный источник правды, миграции с проверкой отката.
-
-**Интерфейсы** — React, TypeScript strict, Vite, CSS Modules. Своя дизайн-система
-вместо готовых библиотек.
-
-**Эксплуатация** — Docker Compose, nginx, S3-совместимое хранилище, резервное
-копирование с проверкой восстановления.
-
-</td>
-<td width="50%" valign="top">
-
-### Как строю
+## Как строю
 
 - сервер решает, клиент не доверяется
 - авторизация проверяется на бэкенде, а не в браузере
 - тонкие обработчики, правила живут в сервисах
 - тесты до релиза, а не после
-- интерфейс без шаблонной эстетики: одна палитра,
-  читаемая типографика, движение только осмысленное
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
-</div>
+- интерфейс без шаблонной эстетики: одна палитра, читаемая типографика,
+  движение только осмысленное
 
 ## Репозитории
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**[SaasBot](https://github.com/evgeha52/SaasBot)** — Telegram-бот с AI-ответами на Go:
+слоистая структура, zap для логов, конфигурация через окружение.
 
-**[SaasBot](https://github.com/evgeha52/SaasBot)**
-
-Telegram-бот с AI-ответами на Go: слоистая структура (`cmd` / `internal`),
-zap для логов, конфигурация через окружение.
-
-`Go` · `Telegram Bot API` · `OpenAI`
-
-</td>
-<td width="50%" valign="top">
-
-**[hackproject](https://github.com/evgeha52/hackproject)**
-
-Веб-приложение для анализа товаров по кодам ТН ВЭД с рекомендациями
-по мерам таможенно-тарифного регулирования.
-
-`Web` · `аналитика данных`
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/stats.svg" width="95%" alt="Activity: contributions this year, current and longest streak, weekly rhythm" />
-</div>
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" />
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" width="95%" alt="Contribution snake" />
-</picture>
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
-</div>
-
-<div align="center">
-<sub>
-Баннер, разделители и карточка активности — собственный SVG, который рендерится
-скриптом из данных GitHub API. Змейка собирается Actions.
-</sub>
-</div>
+**[hackproject](https://github.com/evgeha52/hackproject)** — веб-приложение для анализа
+товаров по кодам ТН ВЭД с рекомендациями по мерам таможенно-тарифного регулирования.
