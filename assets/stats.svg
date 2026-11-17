@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-label="Activity: 424 contributions, current streak 7 days">
+<rect width="900" height="240" rx="16" fill="#0a0c0f"/>
+<rect x="0.5" y="0.5" width="899" height="239" rx="16" fill="none" stroke="#272d35"/>
+<rect x="0" y="0" width="3" height="72" fill="#19b9f1"/>
+<text x="36" y="46" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.4" fill="#8d97a5">ACTIVITY 2026</text>
+<text x="36" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#f4f7fa">424</text>
+<text x="36" y="114" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">CONTRIBUTIONS / YEAR</text>
+<text x="248" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#f4f7fa">7d</text>
+<text x="248" y="114" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">CURRENT STREAK</text>
+<text x="460" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#f4f7fa">12d</text>
+<text x="460" y="114" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">LONGEST STREAK</text>
+<text x="672" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#f4f7fa">3</text>
+<text x="672" y="114" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">PUBLIC REPOS</text>
+<text x="36" y="150" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">LAST 12 WEEKS</text>
+<rect x="36" y="197" width="30" height="3" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="104" y="192" width="30" height="8" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="172" y="188" width="30" height="12" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="240" y="193" width="30" height="7" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="308" y="194" width="30" height="6" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="376" y="177" width="30" height="23" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="444" y="179" width="30" height="21" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="512" y="181" width="30" height="19" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="580" y="187" width="30" height="13" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="648" y="195" width="30" height="5" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="716" y="156" width="30" height="44" rx="3" fill="#111419" stroke="#272d35"/>
+<rect x="784" y="180" width="30" height="20" rx="3" fill="#19b9f1"/>
+<text x="864" y="200" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.6" fill="#8d97a5">PEAK 93/WK</text>
+</svg>
