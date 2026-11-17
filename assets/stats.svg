@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="136" viewBox="0 0 860 136" role="img" aria-label="Активность: 427 контрибуций за год, 7 дней подряд">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="136" viewBox="0 0 860 136" role="img" aria-label="Активность: 428 контрибуций за год, 7 дней подряд">
 <rect width="860" height="136" fill="#0a0c0f"/>
 <rect x="0" y="0" width="3" height="136" fill="#272d35"/>
 <rect x="0" y="0" width="3" height="76" fill="#19b9f1"/>
-<text x="36" y="60" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#f4f7fa">427</text>
+<text x="36" y="60" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#f4f7fa">428</text>
 <text x="36" y="82" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8d97a5">контрибуций за год</text>
 <text x="204" y="60" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#f4f7fa">7</text>
 <text x="204" y="82" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8d97a5">дней подряд</text>
@@ -11,7 +11,7 @@
 <text x="560" y="60" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8d97a5">последние 12 недель</text>
 <rect x="560" y="97" width="15" height="3" rx="2" fill="#1c232b"/>
 <rect x="580" y="93" width="15" height="7" rx="2" fill="#1c232b"/>
-<rect x="600" y="90" width="15" height="10" rx="2" fill="#1c232b"/>
+<rect x="600" y="89" width="15" height="11" rx="2" fill="#1c232b"/>
 <rect x="620" y="94" width="15" height="6" rx="2" fill="#1c232b"/>
 <rect x="640" y="95" width="15" height="5" rx="2" fill="#1c232b"/>
 <rect x="660" y="80" width="15" height="20" rx="2" fill="#1c232b"/>
@@ -20,5 +20,5 @@
 <rect x="720" y="89" width="15" height="11" rx="2" fill="#1c232b"/>
 <rect x="740" y="96" width="15" height="4" rx="2" fill="#1c232b"/>
 <rect x="760" y="62" width="15" height="38" rx="2" fill="#1c232b"/>
-<rect x="780" y="82" width="15" height="18" rx="2" fill="#19b9f1"/>
+<rect x="780" y="81" width="15" height="19" rx="2" fill="#19b9f1"/>
 </svg>
