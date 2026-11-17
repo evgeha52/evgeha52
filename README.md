@@ -1,86 +1,95 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=26&duration=3200&pause=900&color=19B9F1&center=true&vCenter=true&width=760&height=70&lines=Telegram-first+products+for+CS2;Python+%C2%B7+FastAPI+%C2%B7+PostgreSQL;React+%C2%B7+TypeScript+%C2%B7+Vite;Building+QUP+%E2%80%94+one+ecosystem+for+players" alt="Typing" />
-
-### Привет. Меня зовут Евгений.
-
-Собираю **QUP** — Telegram-экосистему для игроков Counter-Strike 2: матчмейкинг,
-тактическая база, клипы, аналитика матчей и будущий AI-разбор демок.
-Один продукт, который живёт в Telegram и готовится к самостоятельной веб-версии.
-
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/banner.svg" width="100%" alt="Evgeniy — Telegram-first products for Counter-Strike 2" />
 </div>
 
----
+<br/>
 
-## Стек, на котором это работает
+Собираю **QUP** — Telegram-экосистему для игроков Counter-Strike 2. Один продукт:
+бот, Mini App, матчмейкинг, тактическая база с защищённым видео, клипы, статистика
+и будущий разбор демок. Репозиторий закрытый, пока идёт разработка.
+
+Пишу сам: backend, frontend, инфраструктуру и дизайн-систему.
 
 <div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.12-0a0c0f?style=flat-square&logo=python&logoColor=19b9f1&labelColor=111419)
-![FastAPI](https://img.shields.io/badge/FastAPI-async-0a0c0f?style=flat-square&logo=fastapi&logoColor=19b9f1&labelColor=111419)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-0a0c0f?style=flat-square&logo=postgresql&logoColor=19b9f1&labelColor=111419)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.x-0a0c0f?style=flat-square&logo=sqlalchemy&logoColor=19b9f1&labelColor=111419)
-![React](https://img.shields.io/badge/React-0a0c0f?style=flat-square&logo=react&logoColor=19b9f1&labelColor=111419)
-![TypeScript](https://img.shields.io/badge/TypeScript-strict-0a0c0f?style=flat-square&logo=typescript&logoColor=19b9f1&labelColor=111419)
-![Vite](https://img.shields.io/badge/Vite-0a0c0f?style=flat-square&logo=vite&logoColor=19b9f1&labelColor=111419)
-![Docker](https://img.shields.io/badge/Docker-0a0c0f?style=flat-square&logo=docker&logoColor=19b9f1&labelColor=111419)
-
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
 </div>
-
-## Над чем работаю сейчас
 
 <table>
 <tr>
-<td width="58%" valign="top">
+<td width="50%" valign="top">
 
-**QUP** — Telegram Mini App и бот для CS2-сообщества.
+### Чем занимаюсь
 
-- матчмейкинг с профилем игрока и фильтрами
-- база раскидок Mirage с защищённым видео
-- клипы, тактики, статистика, разбор демок
-- дизайн-система QUP Command Deck
-- строгая серверная авторизация через Telegram initData
+**Backend** — асинхронный Python, FastAPI, SQLAlchemy, Alembic.
+PostgreSQL как единственный источник правды, миграции с проверкой отката.
+
+**Frontend** — React, TypeScript strict, Vite, CSS Modules.
+Своя дизайн-система вместо компонентных библиотек.
+
+**Инфраструктура** — Docker Compose, nginx, S3-совместимое хранилище,
+резервное копирование с проверкой восстановления.
 
 </td>
-<td width="42%" valign="top">
+<td width="50%" valign="top">
 
-**Принципы, по которым строю:**
+### Как строю
 
-- Postgres как источник правды
-- серверные проверки, клиент не решает
+- сервер решает, клиент не доверяется
+- авторизация через подписанный Telegram initData
 - тонкие обработчики, правила в сервисах
 - тесты до релиза, а не после
-- дизайн без AI-шаблонности
+- интерфейс без шаблонной «ИИ-эстетики»:
+  одна палитра, читаемая типографика,
+  движение только осмысленное
 
 </td>
 </tr>
 </table>
 
-## Цифры
+<div align="center">
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
+</div>
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=evgeha52&show_icons=true&hide_rank=true&include_all_commits=true&count_private=true&bg_color=0A0C0F&title_color=19B9F1&text_color=F4F7FA&icon_color=41C8F7&border_color=272D35&hide_title=false" alt="stats" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evgeha52&layout=compact&langs_count=6&bg_color=0A0C0F&title_color=19B9F1&text_color=F4F7FA&border_color=272D35" alt="langs" />
-
-<img src="https://streak-stats.demolab.com?user=evgeha52&background=0A0C0F&border=272D35&stroke=19B9F1&ring=19B9F1&fire=41C8F7&currStreakLabel=F4F7FA&sideLabels=8D97A5&dates=8D97A5&currStreakNum=F4F7FA&sideNums=F4F7FA" alt="streak" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=evgeha52&bg_color=0A0C0F&color=19B9F1&line=41C8F7&point=F4F7FA&area=true&hide_border=false&custom_title=Activity" alt="activity" />
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=py,fastapi,postgres,docker,nginx,react,ts,vite,git,linux,bash&theme=dark&perline=11" alt="stack" />
+</a>
 
 </div>
 
-## Вклад
+<div align="center">
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
+</div>
+
+<div align="center">
+
+<img height="152" src="https://github-readme-stats.vercel.app/api?username=evgeha52&show_icons=true&hide_rank=true&hide_title=true&include_all_commits=true&count_private=true&bg_color=0A0C0F&title_color=19B9F1&text_color=B6C1CD&icon_color=41C8F7&border_color=272D35" alt="GitHub stats" />
+<img height="152" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evgeha52&layout=compact&langs_count=6&hide_title=true&bg_color=0A0C0F&title_color=19B9F1&text_color=B6C1CD&border_color=272D35" alt="Top languages" />
+
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=evgeha52&bg_color=0A0C0F&color=19B9F1&line=41C8F7&point=F4F7FA&area=true&area_color=19B9F1&hide_border=false&border_color=272D35&custom_title=Activity" width="95%" alt="Activity graph" />
+</div>
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" />
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/output/snake.svg" width="95%" alt="Contribution snake" />
 </picture>
 
 </div>
 
 <div align="center">
-<sub>Профиль обновляется автоматически: статистика и змейка собираются GitHub Actions.</sub>
+  <img src="https://raw.githubusercontent.com/evgeha52/evgeha52/main/assets/divider.svg" width="100%" alt="" />
+</div>
+
+<div align="center">
+<sub>
+Баннер и разделители — собственный SVG в репозитории, без внешних зависимостей.<br/>
+Статистика и змейка обновляются GitHub Actions.
+</sub>
 </div>
