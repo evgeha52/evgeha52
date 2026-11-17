@@ -12,7 +12,7 @@
 
 ## Чем занимаюсь
 
-- Backend: Python, FastAPI, PostgreSQL
+- Backend: Python, FastAPI, PostgreSQL,Go
 - Интерфейсы: React, TypeScript
 - Telegram-боты: Bot API, Go
 - Инфраструктура: Docker, nginx, хранилище файлов, резервные копии
