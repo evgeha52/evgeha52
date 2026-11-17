@@ -1,4 +1,4 @@
-"""Render the QUP-style activity card for the GitHub profile.
+"""Render the activity card for the GitHub profile.
 
 Runs in GitHub Actions with the repo token, so the profile never depends on a
 third-party image service (those rate-limit and break the page).
@@ -20,8 +20,6 @@ OUT = Path(os.environ.get("OUT_PATH", "assets/stats.svg"))
 QUERY = """
 query($login: String!) {
   user(login: $login) {
-    repositories(privacy: PUBLIC) { totalCount }
-    followers { totalCount }
     contributionsCollection {
       contributionCalendar {
         totalContributions
@@ -33,11 +31,9 @@ query($login: String!) {
 """
 
 BG = "#0a0c0f"
-SURFACE = "#111419"
 BORDER = "#272d35"
 TEXT = "#f4f7fa"
 MUTED = "#8d97a5"
-SECONDARY = "#b6c1cd"
 ACCENT = "#19b9f1"
 FONT = "Inter, 'Segoe UI', Helvetica, Arial, sans-serif"
 MONO = "'SFMono-Regular', Consolas, 'Liberation Mono', monospace"
@@ -51,7 +47,7 @@ def fetch() -> dict:
         headers={
             "Authorization": f"bearer {TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "qup-profile-card",
+            "User-Agent": "profile-card",
         },
     )
     try:
@@ -65,7 +61,7 @@ def fetch() -> dict:
 
 
 def streaks(days: list[tuple[date, int]]) -> tuple[int, int]:
-    """Return the current and longest run of days with at least one contribution."""
+    """Current and longest run of days with at least one contribution."""
     longest = current = 0
     for _, count in days:
         if count > 0:
@@ -73,20 +69,17 @@ def streaks(days: list[tuple[date, int]]) -> tuple[int, int]:
             longest = max(longest, current)
         else:
             current = 0
-    # The current streak only counts if it reaches today or yesterday.
     if days and days[-1][1] == 0:
         current = 0
     return current, longest
 
 
-def bars(days: list[tuple[date, int]], weeks: int = 12) -> list[int]:
-    """Weekly totals for the last N weeks, oldest first."""
+def weekly(days: list[tuple[date, int]], weeks: int = 12) -> list[int]:
     buckets: dict[date, int] = {}
     for day, count in days:
-        week = day - timedelta(days=day.weekday())
-        buckets[week] = buckets.get(week, 0) + count
-    ordered = sorted(buckets.items())[-weeks:]
-    return [total for _, total in ordered]
+        monday = day - timedelta(days=day.weekday())
+        buckets[monday] = buckets.get(monday, 0) + count
+    return [total for _, total in sorted(buckets.items())[-weeks:]]
 
 
 def render(user: dict) -> str:
@@ -98,62 +91,53 @@ def render(user: dict) -> str:
     ]
     total = calendar["totalContributions"]
     current, longest = streaks(days)
-    weekly = bars(days)
-    peak = max(weekly) or 1
+    bars = weekly(days)
+    peak = max(bars) or 1
 
-    width, height = 900, 240
-    columns = [
-        ("CONTRIBUTIONS / YEAR", str(total)),
-        ("CURRENT STREAK", f"{current}d"),
-        ("LONGEST STREAK", f"{longest}d"),
-        ("PUBLIC REPOS", str(user["repositories"]["totalCount"])),
+    width, height = 860, 136
+    metrics = [
+        (str(total), "контрибуций за год"),
+        (str(current), "дней подряд"),
+        (str(longest), "лучшая серия"),
     ]
 
-    parts: list[str] = [
+    out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" '
-        f'aria-label="Activity: {total} contributions, current streak {current} days">',
-        f'<rect width="{width}" height="{height}" rx="16" fill="{BG}"/>',
-        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" '
-        f'fill="none" stroke="{BORDER}"/>',
-        f'<rect x="0" y="0" width="3" height="72" fill="{ACCENT}"/>',
-        f'<text x="36" y="46" font-family="{MONO}" font-size="10" letter-spacing="2.4" '
-        f'fill="{MUTED}">ACTIVITY 2026</text>',
+        f'aria-label="Активность: {total} контрибуций за год, {current} дней подряд">',
+        f'<rect width="{width}" height="{height}" fill="{BG}"/>',
+        f'<rect x="0" y="0" width="3" height="{height}" fill="{BORDER}"/>',
+        f'<rect x="0" y="0" width="3" height="76" fill="{ACCENT}"/>',
     ]
 
     x = 36
-    for label, value in columns:
-        parts.append(
-            f'<text x="{x}" y="92" font-family="{FONT}" font-size="30" font-weight="600" '
+    for value, label in metrics:
+        out.append(
+            f'<text x="{x}" y="60" font-family="{FONT}" font-size="28" font-weight="600" '
             f'fill="{TEXT}">{value}</text>'
         )
-        parts.append(
-            f'<text x="{x}" y="114" font-family="{MONO}" font-size="9" letter-spacing="1.6" '
+        out.append(
+            f'<text x="{x}" y="82" font-family="{FONT}" font-size="12" '
             f'fill="{MUTED}">{label}</text>'
         )
-        x += 212
+        x += 168
 
-    # Weekly rhythm: quiet bars, only the last one carries the accent.
-    bar_x, bar_base, bar_max, slot = 36, 200, 44, 68
-    parts.append(
-        f'<text x="{bar_x}" y="150" font-family="{MONO}" font-size="9" letter-spacing="1.6" '
-        f'fill="{MUTED}">LAST 12 WEEKS</text>'
+    # Weekly rhythm: quiet bars, the most recent one carries the accent.
+    bar_x, base, bar_max, slot, bar_w = 560, 100, 38, 20, 15
+    out.append(
+        f'<text x="{bar_x}" y="60" font-family="{FONT}" font-size="12" fill="{MUTED}">'
+        f"последние 12 недель</text>"
     )
-    for index, value in enumerate(weekly):
-        bar_height = max(3, round(value / peak * bar_max))
-        fill = ACCENT if index == len(weekly) - 1 else SURFACE
-        stroke = "" if index == len(weekly) - 1 else f' stroke="{BORDER}"'
-        parts.append(
-            f'<rect x="{bar_x + index * slot}" y="{bar_base - bar_height}" width="30" '
-            f'height="{bar_height}" rx="3" fill="{fill}"{stroke}/>'
+    for index, value in enumerate(bars):
+        bar_h = max(2, round(value / peak * bar_max))
+        fill = ACCENT if index == len(bars) - 1 else "#1c232b"
+        out.append(
+            f'<rect x="{bar_x + index * slot}" y="{base - bar_h}" width="{bar_w}" '
+            f'height="{bar_h}" rx="2" fill="{fill}"/>'
         )
 
-    parts.append(
-        f'<text x="{width - 36}" y="{bar_base}" text-anchor="end" font-family="{MONO}" '
-        f'font-size="9" letter-spacing="1.6" fill="{MUTED}">PEAK {peak}/WK</text>'
-    )
-    parts.append("</svg>")
-    return "\n".join(parts)
+    out.append("</svg>")
+    return "\n".join(out)
 
 
 def main() -> None:
